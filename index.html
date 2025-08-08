@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Oryza Design Company - Luxury Creative Services</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary: #1a1a1a;
+            --secondary: #c9a769;
+            --accent: #ffffff;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .animate-fade-in {
+            animation: fadeIn 1s ease-out forwards;
+        }
+        .hover-scale {
+            transition: transform 0.3s ease;
+        }
+        .hover-scale:hover {
+            transform: scale(1.03);
+        }
+        .service-card {
+            transition: all 0.5s ease;
+            border-bottom: 3px solid transparent;
+        }
+        .service-card:hover {
+            transform: translateY(-10px);
+            border-bottom-color: var(--secondary);
+        }
+        .nav-link {
+            position: relative;
+        }
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: 0;
+            left: 0;
+            background-color: var(--secondary);
+            transition: width 0.3s ease;
+        }
+        .nav-link:hover::after {
+            width: 100%;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800 font-sans">
+    <!-- Header with Logo and Navigation -->
+    <header class="fixed w-full bg-white bg-opacity-90 shadow-sm z-50">
+        <div class="container mx-auto px-6 py-4">
+            <div class="flex justify-between items-center">
+                <!-- Logo -->
+                <div class="flex items-center">
+                    <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/dbdce11c-8d41-4d99-8753-013111c09ce6.png" alt="Oryza Design Company logo - elegant typography with golden accents on dark background" class="h-12" onerror="this.src='./logo-placeholder.png'">
+                </div>
+                
+                <!-- Navigation -->
+                <nav class="hidden md:flex space-x-8">
+                    <a href="#" class="nav-link text-gray-700 hover:text-amber-700 font-medium">Home</a>
+                    <a href="#services" class="nav-link text-gray-700 hover:text-amber-700 font-medium">Services</a>
+                    <a href="#about" class="nav-link text-gray-700 hover:text-amber-700 font-medium">About</a>
+                    <a href="#contact" class="nav-link text-gray-700 hover:text-amber-700 font-medium">Contact</a>
+                </nav>
+                
+                <button class="md:hidden focus:outline-none">
+                    <i class="fas fa-bars text-2xl text-gray-700"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="relative h-screen flex items-center justify-center bg-black text-white">
+        <div class="absolute inset-0 bg-black opacity-50"></div>
+        <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/ae7c00b1-5040-49c8-991b-68518a521e1b.png" alt="Elegant workspace with designer working on luxury wedding invitation designs with gold foil accents" class="absolute inset-0 w-full h-full object-cover">
+        
+        <div class="container mx-auto px-6 z-10 animate-fade-in">
+            <div class="max-w-3xl">
+                <h1 class="text-4xl md:text-6xl font-bold mb-6 leading-tight">Elevate Your Brand with Premium Design Excellence</h1>
+                <p class="text-xl md:text-2xl text-gray-200 mb-8">Oryza Design Company crafts bespoke digital experiences that embody luxury, sophistication, and timeless elegance.</p>
+                <div class="flex space-x-4">
+                    <a href="#contact" class="bg-amber-700 hover:bg-amber-800 text-white px-8 py-3 rounded-md font-medium hover-scale transition-all duration-300">Get Started</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold mb-4">Our Exclusive Services</h2>
+                <div class="w-24 h-1 bg-amber-700 mx-auto mb-6"></div>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">We specialize in crafting exquisite designs that elevate your brand and captivate your audience with premium quality.</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Invitation Design -->
+                <div class="service-card bg-gray-50 p-8 rounded-lg shadow-md hover:shadow-lg">
+                    <div class="w-16 h-16 bg-amber-700 rounded-full flex items-center justify-center mb-6 mx-auto">
+                        <i class="fas fa-envelope-open-text text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4 text-center">Invitation Design</h3>
+                    <p class="text-gray-600 mb-6">Bespoke invitations for weddings, corporate events, and special occasions that make a lasting impression with luxurious materials and innovative design.</p>
+                    <div class="flex justify-center">
+                        <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/9edaa97a-5e7e-4bd4-812a-b1f573509fca.png" alt="Luxury wedding invitation with gold foil embossing, floral motifs, and elegant typography" class="rounded-md w-full h-48 object-cover">
+                    </div>
+                </div>
+                
+                <!-- Photo Editing -->
+                <div class="service-card bg-gray-50 p-8 rounded-lg shadow-md hover:shadow-lg">
+                    <div class="w-16 h-16 bg-amber-700 rounded-full flex items-center justify-center mb-6 mx-auto">
+                        <i class="fas fa-camera-retro text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4 text-center">Photo Editing</h3>
+                    <p class="text-gray-600 mb-6">Professional photo retouching that brings out the best in your images, from subtle enhancements to complete creative transformations.</p>
+                    <div class="flex justify-center">
+                        <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/cfedb75f-8ec8-4278-b7ba-9a3c22bec69a.png" alt="Before and after comparison showing professional photo retouching enhancing a portrait" class="rounded-md w-full h-48 object-cover">
+                    </div>
+                </div>
+                
+                <!-- Video Editing -->
+                <div class="service-card bg-gray-50 p-8 rounded-lg shadow-md hover:shadow-lg">
+                    <div class="w-16 h-16 bg-amber-700 rounded-full flex items-center justify-center mb-6 mx-auto">
+                        <i class="fas fa-video text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4 text-center">Video Editing</h3>
+                    <p class="text-gray-600 mb-6">Cinematic storytelling through professional video editing, color grading, and motion graphics for brands that demand excellence.</p>
+                    <div class="flex justify-center">
+                        <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/c0292c95-a15e-4314-9c75-679ea0475bab.png" alt="Professional video editor working on cinematic wedding film with multiple screens showing editing process" class="rounded-md w-full h-48 object-cover">
+                    </div>
+                </div>
+                
+                <!-- Website Creation -->
+                <div class="service-card bg-gray-50 p-8 rounded-lg shadow-md hover:shadow-lg">
+                    <div class="w-16 h-16 bg-amber-700 rounded-full flex items-center justify-center mb-6 mx-auto">
+                        <i class="fas fa-laptop-code text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4 text-center">Website Design</h3>
+                    <p class="text-gray-600 mb-6">Premium responsive websites that combine stunning aesthetics with seamless functionality and an exceptional user experience.</p>
+                    <div class="flex justify-center">
+                        <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/f70d9646-8746-4914-859f-f6cea0881171.png" alt="Modern laptop and mobile devices displaying a luxury website design with elegant typography and photography" class="rounded-md w-full h-48 object-cover">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col lg:flex-row items-center">
+                <div class="lg:w-1/2 mb-12 lg:mb-0 lg:pr-12">
+                    <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/b3729569-8ef6-4341-b18d-ab80a11a84fe.png" alt="Oryza Design Company team working in a bright, modern design studio with creative workspaces" class="rounded-lg shadow-xl w-full">
+                </div>
+                <div class="lg:w-1/2">
+                    <h2 class="text9-4xl font-bold mb-6">Crafting Excellence in Design</h2>
+                    <div class="w-24 h-1 bg-amber-700 mb-6"></div>
+                    <p class="text-gray-600 text-lg mb-6">Oryza Design Company is a creative and affordable design service provider specializing in invitation design, photo editing, video editing, and website creation. With a commitment to quality and user satisfaction, Oryza delivers visually appealing and functional solutions tailored to meet your personal and business needs. Whether you're planning a special event or looking to enhance your digital presence, Oryza ensures a seamless and budget-friendly experience.</p>
+                    <p class="text-gray-600 text-lg mb-8"> For inquiries or to get started, contact us at 9360752934 or 8438638823.</p>
+                    
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
+                        <div>
+                        <div>
+                            <p class="text-gray-600">Recognized for design excellence internationally</p>
+                        </div>
+                        </div>
+                    </div>
+                <div>   
+                    <a href="#" class="inline-block px-8 py-3 bg-gray-800 text-white font-medium rounded hover:bg-amber-700 transition-all duration-300">Our Story</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold mb-4">Let's Create Something Extraordinary</h2>
+                <div class="w-24 h-1 bg-amber-700 mx-auto mb-6"></div>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">Ready to elevate your project? Contact us to discuss your vision with our creative team.</p>
+            </div>
+            
+            <div class="flex flex-col lg:flex-row">
+                <div class="lg:w-1/2 mb-12 lg:mb-0 lg:pr-12">
+                    <div class="bg-white p-8 rounded-lg shadow-md">
+                        <h3 class="text-2xl font-bold mb-6">Contact Information</h3>
+                        
+                        <div class="flex items-start mb-6">
+                            <div class="w-10 h-10 rounded-full bg-amber-100 flex items-center justify-center mr-4">
+                                <i class="fas fa-map-marker-alt text-amber-700"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold mb-1">Our Studio</h4>
+                                <p class="text-gray-600">Chennai</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start mb-6">
+                            <div class="w-10 h-10 rounded-full bg-amber-100 flex items-center justify-center mr-4">
+                                <i class="fas fa-envelope text-amber-700"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold mb-1">Email Us</h4>
+                                <p class="text-gray-600">oryzadesigncompany@gmail.com</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="w-10 h-10 rounded-full bg-amber-100 flex items-center justify-center mr-4">
+                                <i class="fas fa-phone-alt text-amber-700"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold mb-1">Call Us</h4>
+                                <p class="text-gray-600">9360752934<br>8438638823</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="lg:w-1/2">
+                    <form class="bg-white p-8 rounded-lg shadow-md">
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+                            <div>
+                                <label for="name" class="block text-gray-700 font-medium mb-2">Full Name</label>
+                                <input type="text" id="name" class="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-amber-700">
+                            </div>
+                            <div>
+                                <label for="email" class="block text-gray-700 font-medium mb-2">Email Address</label>
+                                <input type="email" id="email" class="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-amber-700">
+                            </div>
+                        </div>
+                        
+                        <div class="mb-6">
+                            <label for="project" class="block text-gray-700 font-medium mb-2">Project Type</label>
+                            <select id="project" class="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-amber-700">
+                                <option value="">Select a service</option>
+                                <option value="invitation">Invitation Design</option>
+                                <option value="photo">Photo Editing</option>
+                                <option value="video">Video Editing</option>
+                                <option value="website">Website Design</option>
+                                <option value="multiple">Multiple Services</option>
+                            </select>
+                        </div>
+                        
+                        <div class="mb-6">
+                            <label for="message" class="block text-gray-700 font-medium mb-2">Message</label>
+                            <textarea id="message" rows="4" class="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-amber-700"></textarea>
+                        </div>
+                        
+                        <button type="submit" class="w-full bg-amber-700 hover:bg-amber-800 text-white font-medium py-3 px-6 rounded transition-all duration-300">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="container mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-12">
+                <div>
+                    <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/c6ca7bca-4499-45a8-9e01-9979a5aa4bfe.png" alt="Oryza Design Company logo - white typography on dark background" class="h-12 mb-6">
+                    <p class="text-gray-400 mb-4">Premium design services for luxury brands, events, and creatives worldwide.</p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-bold mb-6">Services</h3>
+                    <ul class="space-y-3">
+                        <li><a href="#" class="text-gray-400 hover:text-ambers-500 transition-colors">Invitation Design</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-ambers-500 transition-colors">Photo Editing</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-ambers-500 transition-colors">Video Editing</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-ambers-500 transition-colors">Website Design</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-ambers-500 transition-colors">Brand Identity</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-bold mb-6">Company</h3>
+                    <ul class="space-y-3">
+                        <li><a href="#" class="text-gray-400 hover:text-ambers-500 transition-colors">About Us</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-bold mb-6">Newsletter</h3>
+                    <p class="text-gray-400 mb-4">Subscribe for design insights and exclusive offers.</p>
+                    <form class="flex">
+                        <input type="email" placeholder="Your email" class="px-4 py-2 rounded-l focus:outline-none text-gray-900 w-full">
+                        <button type="submit" class="bg-amber-700 hover:bg-amber-800 px-4 py-2 rounded-r">
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-gray-400 mb-4 md:mb-0">© 2025 Oryza Design Company. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button id="backToTop" class="fixed bottom-8 right-8 w-12 h-12 bg-amber-700 rounded-full flex items-center justify-center text-white shadow-lg opacity-0 invisible transition-all duration-300">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script>
+        // Back to Top Button
+        const backToTop = document.getElementById('backToTop');
+        
+        window.addEventListener('scroll', () => {
+            if (window.pageYOffset > 300) {
+                backToTop.classList.remove('opacity-0', 'invisible');
+                backToTop.classList.add('opacity-100', 'visible');
+            } else {
+                backToTop.classList.remove('opacity-100', 'visible');
+                backToTop.classList.add('opacity-0', 'invisible');
+            }
+        });
+        
+        backToTop.addEventListener('click', () => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+        
+        // Mobile Menu Toggle
+        const mobileMenuButton = document.querySelector('button.md\\:hidden');
+        // Would implement mobile menu functionality here
+        
+        // Smooth Scrolling for Anchor Links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+        
+        // Form Submission
+        const contactForm = document.querySelector('form');
+        contactForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            // Would implement form submission logic here
+            alert('Thank you for your message! We will contact you shortly.');
+            this.reset();
+        });
+    </script>
+</body>
+</html>
+
